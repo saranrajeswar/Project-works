@@ -1,0 +1,79 @@
+<html>
+<head><meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Syne">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><style>
+.links-container {
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  align-items: center;
+	  gap: 20px;
+	}
+	
+	</style>
+<style>
+	.button {
+		background-color: #2332b8;
+			border: 2px solid #020353;
+			color: whitesmoke;
+			padding: 0.5em 0.5em;
+			text-align: center;
+			text-decoration: none;
+			font-size: 1em;
+			display: inline-block;
+			width: 18%;
+			border-radius: 5px;
+			box-shadow: 3px 3px 8px 0 #000; 
+		}
+body {
+		background-image: url("{{url_for('static', filename='background.jpg')}}");
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		}
+			h1{
+			background-color: rgb(209, 9, 9);
+			color: white;
+			}
+			h2{
+			
+			color: rgb(17, 12, 12);
+			}
+
+
+</style>
+</head>
+<body>
+<center>
+
+
+<h1>Predict House Construction Price</h1>
+<pre>
+<form action="{{ url_for('predict')}}"method="post">
+	<noscript>You need to enable JavaScript to run this app.</noscript>
+<h3>Enter the area in sq.ft --><input type='text' name="area" placeholder="Please Enter Numbers Only" required="required"/></h3>
+
+
+<button type="submit" class="button">Predict Price</button>
+</form>
+<textarea>
+{{prediction_text}}
+</textarea>
+
+
+</center>
+<center><h2> <div class="w3-col m12 w3-large w3-margin-bottom">
+	<i class="fa fa-map-marker" style="width:30px"></i> Chennai,TamilNadu<br>
+	<i class="fa fa-phone" style="width:30px"></i> Phone: 9360785025<br>
+	<i class="fa fa-envelope" style="width:30px"> </i> Email: saraneswar23@gmail.com<br>
+  </div></h2>
+<!-- Add links to your social networks here. -->
+
+<a href="https://saraneswar23.wixsite.com/suggestion">Suggesstion Link</a>
+
+
+  
+</div></center>
+</body>
+</html>
